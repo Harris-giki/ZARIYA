@@ -208,9 +208,12 @@ const Hero = () => {
             </motion.div>
 
             {/* Right side - What we do section */}
-            <motion.div className="space-y-8" variants={containerVariants}>
+            <motion.div
+              className="space-y-8 pt-15 sm:pt-0 lg:pt-0 md:pt-0"
+              variants={containerVariants}
+            >
               <motion.h3
-                className="text-2xl sm:text-3xl font-light text-gray-900"
+                className="text-2xl sm:text-3xl font-light text-gray-900 text-center sm:text-start lg:text-start"
                 variants={itemVariants}
               >
                 What we do

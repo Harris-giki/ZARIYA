@@ -45,7 +45,7 @@ export function JoinUs() {
             <img
               src="/zariya-2.jpg"
               alt="Student-led"
-              className="w-full h-65 object-cover shadow-lg rounded-lg"
+              className="w-full h-40 object-cover shadow-lg rounded-lg lg:h-65 md:lg-65 sm:lg-65"
             />
           </div>
         </div>
