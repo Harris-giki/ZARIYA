@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { cn } from "../lib/utils";
 
 export const StickyBanner = ({ className, children, hideOnScroll = false }) => {
@@ -18,40 +18,37 @@ export const StickyBanner = ({ className, children, hideOnScroll = false }) => {
   return (
     <motion.div
       className={cn(
-        "sticky inset-x-0 top-0 z-40 flex min-h-14 w-full items-center justify-center px-4 py-3 backdrop-blur-md border-b border-gray-700/60 shadow-sm bg-gray-950 text-gray-100",
+        "sticky inset-x-0 top-0 z-40 flex min-h-10 sm:min-h-12 w-full items-center justify-center px-2 sm:px-4 py-1 sm:py-2 backdrop-blur-md border-b border-gray-700/60 shadow-sm bg-gray-950 text-gray-100",
         className
       )}
-      initial={{
-        y: -100,
-        opacity: 0,
-      }}
-      animate={{
-        y: open ? 0 : -100,
-        opacity: open ? 1 : 0,
-      }}
-      transition={{
-        duration: 0.3,
-        ease: "easeInOut",
-      }}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: open ? 0 : -100, opacity: open ? 1 : 0 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
     >
       {children || (
-        <div className="flex items-center gap-3">
-          <div className="hidden sm:block w-px h-4 bg-gray-600"></div>
-          <p className="text-sm hidden sm:block">
-            ZARIYA currently raises 12,000 PKR monthly, which is half the amount
-            needed to support one student's mess fee. Help us fully sponsor at
-            least one deserving student.
+        <div className="flex items-center gap-1 sm:gap-2">
+          <div className="hidden sm:block w-px h-3 sm:h-4 bg-gray-600"></div>
+          <p className="text-xs sm:text-sm justify-center">
+            <span className="block sm:hidden text-center">
+              ZARIYA raises 12,000 PKR monthly, that is half the amount needed
+              to sponsor a student’s mess fee. Help us reach our goal.
+            </span>
+            <span className="hidden sm:block text-center">
+              ZARIYA currently raises 12,000 PKR monthly, which is half the
+              amount needed to support one student's mess fee. Help us fully
+              sponsor at least one deserving student.
+            </span>
           </p>
         </div>
       )}
       <motion.button
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        className="absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer hover:bg-gray-800 rounded-full p-1.5 transition-colors duration-200"
+        className="absolute top-1/2 right-1 sm:right-2 -translate-y-1/2 cursor-pointer hover:bg-gray-800 rounded-full p-1.5 sm:p-2 transition-colors duration-200"
         onClick={() => setOpen(!open)}
         aria-label="Close banner"
       >
-        <CloseIcon className="h-4 w-4 text-gray-300 hover:text-white" />
+        <CloseIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-300 hover:text-white" />
       </motion.button>
     </motion.div>
   );

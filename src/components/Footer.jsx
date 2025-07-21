@@ -16,9 +16,8 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Right side - Contact links and copyright */}
+          {/* Right side - Links and copyright */}
           <div className="flex flex-col items-start md:items-end space-y-2">
-            {/* Social Links */}
             <div className="flex items-center space-x-6">
               <a
                 href="https://www.linkedin.com/company/107045450"
@@ -41,7 +40,6 @@ export function Footer() {
               </a>
             </div>
 
-            {/* Copyright */}
             <p className="text-xs text-gray-600">© 2025 ZARIYA.</p>
           </div>
         </div>

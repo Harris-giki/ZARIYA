@@ -107,7 +107,7 @@ const Hero = () => {
       >
         {/* Header */}
         <motion.header
-          className="flex justify-between items-center px-8 py-6"
+          className="flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 py-6 gap-4 sm:gap-0 text-center sm:text-left"
           variants={itemVariants}
         >
           <motion.div
@@ -158,8 +158,8 @@ const Hero = () => {
         </motion.header>
 
         {/* Content */}
-        <div className="container mx-auto px-8 py-12">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="container mx-auto px-4 sm:px-8 py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left side - Main content */}
             <motion.div className="space-y-8" variants={containerVariants}>
               <motion.div
@@ -177,13 +177,13 @@ const Hero = () => {
 
               <motion.div className="space-y-4" variants={itemVariants}>
                 <motion.h1
-                  className="text-6xl font-light text-gray-900"
+                  className="text-4xl sm:text-5xl md:text-6xl font-light text-gray-900"
                   variants={titleVariants}
                 >
                   Nourishing Dreams,
                 </motion.h1>
                 <motion.h2
-                  className="text-6xl font-light text-gray-400"
+                  className="text-3xl sm:text-4xl md:text-6xl font-light text-gray-400"
                   variants={titleVariants}
                   transition={{ delay: 0.2 }}
                 >
@@ -192,7 +192,7 @@ const Hero = () => {
               </motion.div>
 
               <motion.p
-                className="text-gray-600 text-lg leading-relaxed max-w-lg"
+                className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-lg"
                 variants={itemVariants}
               >
                 Join hands to pay meals of a deserving student with a monthly
@@ -200,7 +200,7 @@ const Hero = () => {
               </motion.p>
 
               <motion.p
-                className="text-gray-500 text-sm"
+                className="text-gray-500 text-xs sm:text-sm"
                 variants={itemVariants}
               >
                 A Non-Profit Initiative by BSCS Batch 33 @ GIKI
@@ -210,7 +210,7 @@ const Hero = () => {
             {/* Right side - What we do section */}
             <motion.div className="space-y-8" variants={containerVariants}>
               <motion.h3
-                className="text-3xl font-light text-gray-900"
+                className="text-2xl sm:text-3xl font-light text-gray-900"
                 variants={itemVariants}
               >
                 What we do
@@ -219,7 +219,7 @@ const Hero = () => {
               <motion.div className="space-y-6" variants={containerVariants}>
                 {/* Compassion */}
                 <motion.div
-                  className="flex items-start space-x-4"
+                  className="flex flex-col sm:flex-row items-start sm:space-x-4 space-y-2 sm:space-y-0"
                   variants={itemVariants}
                   whileHover={{ x: 10 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -246,7 +246,7 @@ const Hero = () => {
 
                 {/* Empowerment */}
                 <motion.div
-                  className="flex items-start space-x-4"
+                  className="flex flex-col sm:flex-row items-start sm:space-x-4 space-y-2 sm:space-y-0"
                   variants={itemVariants}
                   whileHover={{ x: 10 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -274,7 +274,7 @@ const Hero = () => {
 
                 {/* Unity */}
                 <motion.div
-                  className="flex items-start space-x-4"
+                  className="flex flex-col sm:flex-row items-start sm:space-x-4 space-y-2 sm:space-y-0"
                   variants={itemVariants}
                   whileHover={{ x: 10 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -303,8 +303,8 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="flex justify-center align-center mt-7">
+        {/* CTA Button – Hidden on mobile */}
+        <div className="hidden sm:flex justify-center items-center mt-7 px-4 sm:px-0">
           <motion.button
             onClick={() => {
               document

@@ -6,9 +6,9 @@ import { BackgroundBeams } from "../ui/background-beams.jsx";
 import { Footer } from "./components/Footer.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <div className="min-h-screen relative">
+  <div className="overflow-x-hidden min-h-screen relative max-w-full">
     {/* Background Beams - Global across all pages */}
-    <BackgroundBeams />
+    <BackgroundBeams className="max-w-full w-full" />
 
     {/* Main Content - positioned relatively to appear above background */}
     <div className="relative z-10">
