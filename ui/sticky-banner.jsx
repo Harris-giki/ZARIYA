@@ -41,15 +41,6 @@ export const StickyBanner = ({ className, children, hideOnScroll = false }) => {
           </p>
         </div>
       )}
-      <motion.button
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        className="absolute top-1/2 right-1 sm:right-2 -translate-y-1/2 cursor-pointer hover:bg-gray-800 rounded-full p-1.5 sm:p-2 transition-colors duration-200"
-        onClick={() => setOpen(!open)}
-        aria-label="Close banner"
-      >
-        <CloseIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-300 hover:text-white" />
-      </motion.button>
     </motion.div>
   );
 };

@@ -16,7 +16,7 @@ export function JoinUs() {
           >
             <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] sm:w-[22rem] h-[29rem]">
               <h3 className="text-2xl text-slate-100 pb-2">
-                Join Our Monthly Impact Circle.
+                Hover/Click this Card to Join.
               </h3>
               <p className="text-base font-normal text-slate-500 mb-4">
                 Even small monthly contributions create big changes. Start your
